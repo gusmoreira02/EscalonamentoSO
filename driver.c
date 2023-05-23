@@ -17,7 +17,7 @@
 #include "list.h"
 #include "CPU.h"
 #include "schedule_rr.h"
-#include "sjf.h"
+
 #define SIZE    100
 
 
@@ -61,19 +61,19 @@ int main(int argc, char *argv[])
 
 void testRR(FILE* in, char* task, char* name, int priority, int burst) {
     printf("\nROUND ROBIN: \n");
-    char *temp = NULL; // Inicializar a vari·vel 'temp' como NULL
+    char *temp = NULL; // Inicializar a vari√°vel 'temp' como NULL
 
     while (fgets(task, SIZE, in) != NULL) {
-        free(temp); // Liberar a memÛria anteriormente alocada em 'temp'
+        free(temp); // Liberar a mem√≥ria anteriormente alocada em 'temp'
         temp = strdup(task);
         name = strtok(temp, ",");
-        priority = atoi(strtok(NULL, ",")); // Usar NULL como primeiro argumento para continuar a tokenizaÁ„o a partir de 'temp'
+        priority = atoi(strtok(NULL, ",")); // Usar NULL como primeiro argumento para continuar a tokeniza√ß√£o a partir de 'temp'
         burst = atoi(strtok(NULL, ","));
 
         addRR(name, priority, burst);
     }
 
-    free(temp); // Liberar a memÛria alocada em 'temp'
+    free(temp); // Liberar a mem√≥ria alocada em 'temp'
     fclose(in);
 
     scheduleRR();
@@ -83,7 +83,7 @@ void testFCFS(FILE* in, char* temp, char* task, char* name, int burst){
     while (fgets(task, SIZE, in) != NULL) {
         temp = strdup(task);
         name = strtok(temp, ",");
-       // priority = atoi(strtok(NULL, ",")); // Usar NULL como primeiro argumento para continuar a tokenizaÁ„o a partir de 'temp'
+       // priority = atoi(strtok(NULL, ",")); // Usar NULL como primeiro argumento para continuar a tokeniza√ß√£o a partir de 'temp'
         burst = atoi(strtok(NULL, ","));
 
         free(temp);
