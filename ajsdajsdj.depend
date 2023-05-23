@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1684812250 source:c:\users\gusmo\desktop\ajsdajsdj\cpu.c
+	<stdio.h>
+	"task.h"
+
+1684812250 c:\users\gusmo\desktop\ajsdajsdj\task.h
+
+1684816555 source:c:\users\gusmo\desktop\ajsdajsdj\driver.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"task.h"
+	"list.h"
+	"CPU.h"
+	"schedule_rr.h"
+	"sjf.h"
+
+1684815439 c:\users\gusmo\desktop\ajsdajsdj\list.h
+	"task.h"
+
+1684812250 c:\users\gusmo\desktop\ajsdajsdj\cpu.h
+	"task.h"
+
+1684813935 c:\users\gusmo\desktop\ajsdajsdj\schedule_rr.h
+	"task.h"
+	<stdio.h>
+
+1684812250 c:\users\gusmo\desktop\ajsdajsdj\sjf.h
+	"CPU.h"
+
+1684815458 source:c:\users\gusmo\desktop\ajsdajsdj\list.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"list.h"
+	"task.h"
+
+1684819174 source:c:\users\gusmo\desktop\ajsdajsdj\schedule_rr.c
+	"schedule_rr.h"
+	"task.h"
+	<string.h>
+	<stdlib.h>
+	"list.h"
+	"CPU.h"
+
